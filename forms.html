@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Music Suggestions</h1> 
+    <!--
+        The form tag is used to create a container where all the inputs for a form
+        must be put inside.
+        The attributes that are required are name, id, and method.
+
+        name gives some descriptive information about what the form will be used for.
+
+        id allows us to reference this form later in fieldsets and other areas of the code.
+
+        method has two typical values: get and post. Get is used for forms that do not ask
+        for personal information (seach bars, etc.). Post is used for forms that ask for
+        personal information (login and signup pages, etc.)
+    -->
+    <form name="Music Preferances" id="music" method="get">
+        <!--
+            This is a text input. type="text", name and id are all required attributes.
+            The required attribute is only necessary when you want to make sure the user
+            has to fill in the input before submitting the form
+
+            The type attribute defines the type of input.
+            The name attrubute defines the variable name that would be used for the input
+            when the data gets passed to the server (requires back-end scripting). The id 
+            attribute lets us reference the input label from other parts of our code.
+
+            ALl inputs need a label with the for attribute that links the label to the input
+            using the input's id attribute.
+            When an input is required, it is important to include the word required in the 
+            label's text.
+        -->
+        <label for="favourite-artist">Favourite Musical Artist:</label>
+        <input type="text" name="artist" id="favourite-artist" required/>
+        <br/>
+
+        <!--
+            This is an email input. It requires type, name, and id.
+
+            Optional attributes are minlength to define the minimum length entered by the user
+            and maxlength to define the maximum length entered by the user.
+        -->
+        <label for="email-address">Please Enter Your E-mail Address:</label>
+        <input type="email" name="email" id="email-address" minlength="6" maxlength="50"/>
+        <br/>
+
+        <!--
+            This is a password input. type="password", name and id are all required attributes.
+            As always, each input needs a label with the for attribute to link the label to an
+            input.
+        -->
+        <label for="password">Please Enter Your Password:</label>
+        <input type="password" name="userPassword" id="password" minlength="8" maxlength="64"/>
+        <br/>
+
+        <label for="button">Aw jeez is this a button?</label>
+        <input type="button" name="userButton" id="button" value="Tee hee"/>
+        <br/>
+
+        <label for="checkbox">This is a checkbox!</label>
+        <input type="checkbox" id="checkbox" name="userCheckbox" value="bool"/>
+        <br/>
+
+        <label for="number">Now we got numbers!?</label>
+        <input type="number" id="number" name="userNumber" min="1" max="5"/>
+        <br/>
+
+        <p>Please select your age:</p>
+        <input type="radio" id="0" name="user-age" value="0"/>
+        <label for="0">0</label><br>
+        <input type="radio" id="7" name="user-age" value="7"/>
+        <label for="7">7</label>
+        <br/>
+
+        <label for="phone">Enter your phone number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/>
+        <br/>
+
+        <input type="submit"/>
+        <input type="reset"/>
+   </form>
+</body>
+</html>
