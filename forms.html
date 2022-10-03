@@ -21,7 +21,7 @@
         for personal information (seach bars, etc.). Post is used for forms that ask for
         personal information (login and signup pages, etc.)
     -->
-    <form name="Music Preferances" id="music" method="get">
+    <form name="Music-Preferances" id="music" method="get">
         <!--
             This is a text input. type="text", name and id are all required attributes.
             The required attribute is only necessary when you want to make sure the user
@@ -83,8 +83,67 @@
         <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/>
         <br/>
 
+        <label for="uploadFile">Upload your #1 image:</label>
+        <input type="file" id="userFile" name="uploadFile">
+        <br/>
+
+        <label for="Favourite-Person">
+            Please enter your favourite person (REQUIRED!! PUNISHIBLE BY DEATH!!!!!!)
+        </label>
+        <input name="country" type="text" id="country" required />
+        <br/>
+        <br/>
+
+        <fieldset form="Music-Preferances" name="travel-items">
+            <legend>
+                I'm so confused
+            </legend>
+            <legend>
+                Huh?
+            </legend>
+
+        </fieldset>
+        <br/>
+        
+        <label for="Favourite Person">Choose a Car:</label>
+
+        <select name="favPerson" id="favPerson">
+            <option value="Dylan">Dylan</option>
+            <option value="Gavin">Gavin</option>
+            <option value="Einnar">Einnar</option>
+            <option value="That other fella">That other fella</option>
+            <option value="That other fella">You know that funny lookin guy</option>
+            <option value="That other fella">Sorta tall</option>
+        </select>
+        <br/>
+        <br/>
+
+        <label for="textArea">Write whatever the heck ya want feller:</label>
+        <br/>
+        <textarea id="area" name="area" rows="13" cols="42">
+        </textarea>
+        <br/>
+
+        <label for="colour">Select yar favourite colour ya racsist sonofagun!</label>
+        <input type="color" id="colour" name="colour" value="#ff0000">
+
+        <br/>
         <input type="submit"/>
         <input type="reset"/>
+
+        <fieldset form="travel">
+            <legend>What travel items would you reccomend I bring on the trip?</legend>
+            <input type="checkbox" name="waterBottle" id="bottle" value="bottle" />
+            <label for="bottle">Refillable Water Bottle</label>
+            <br/>
+
+            <input type="checkbox" name="hat" id="travel-hat" value="hat" />
+            <label for="bottle">A Hat</label>
+            <br/>
+
+            <input type="checkbox" name="backpack" id="backpack" value="pack" />
+            <label for="bottle">A Backpack</label>
+        </fieldset>
    </form>
 </body>
 </html>
