@@ -37,7 +37,7 @@
             When an input is required, it is important to include the word required in the 
             label's text.
         -->
-        <label for="favourite-artist">Favourite Musical Artist:</label>
+        <label for="favourite-artist">Favourite Musical Artist [required]:</label>
         <input type="text" name="artist" id="favourite-artist" required/>
         <br/>
 
@@ -88,9 +88,9 @@
         <br/>
 
         <label for="Favourite-Person">
-            Please enter your favourite person (REQUIRED!! PUNISHIBLE BY DEATH!!!!!!)
+            Please enter your favourite person
         </label>
-        <input name="country" type="text" id="country" required />
+        <input name="country" type="text" id="country">
         <br/>
         <br/>
         
@@ -101,24 +101,17 @@
             <option value="Gavin">Gavin</option>
             <option value="Einnar">Einnar</option>
             <option value="That other fella">That other fella</option>
-            <option value="That other fella">You know that funny lookin guy</option>
-            <option value="That other fella">Sorta tall</option>
+            <option value="That other other fella">You know that funny lookin guy</option>
+            <option value="That other other other fella">Sorta tall</option>
         </select>
         <br/>
         <br/>
 
-        <label for="textArea">Write whatever the heck ya want feller:</label>
+        <label for="textArea">Write whatever:</label>
         <br/>
         <textarea id="area" name="area" rows="13" cols="42">
         </textarea>
         <br/>
-
-        <label for="colour">Select yar favourite colour ya racsist sonofagun!</label>
-        <input type="color" id="colour" name="colour" value="#ff0000">
-
-        <br/>
-        <input type="submit"/>
-        <input type="reset"/>
 
         <fieldset form="travel">
             <legend>What travel items would you reccomend I bring on the trip?</legend>
@@ -133,6 +126,71 @@
             <input type="checkbox" name="backpack" id="backpack" value="pack" />
             <label for="bottle">A Backpack</label>
         </fieldset>
+
+        <fieldset form="travel">
+            <legend>Which country is this location in</legend>
+
+            <!--
+                This is a radio button input, which are good when you want the user
+                to select one option from a list of options.
+
+                name, id and value are all required attributes. The value should represent
+                the choice the user has selected. Note, most importantly, the name attribute
+                for each related radio buttone should be exactly the same.
+
+                This is also an input where the label typically shows up after the input.
+            -->
+
+            <input type="radio" name="country" id="brazil" value="brazil"/>
+            <label for="brazil">Brazil</label>
+            <br/>
+
+            <input type="radio" name="country" id="canada" value="canada"/>
+            <label for="Canada">Canada</label>
+            <br/>
+        </fieldset>
+
+        <!--
+            This is a select input, which is essintially a dropdown input.
+
+            name and id are required attributes for the select input.
+            
+            Select inputs are widely used, but can lead to acessibility issues.
+            If you can accomplish the same thing you want to do with a different
+            type of input (i.e., radio buttons, text-based, etc.), you should use
+            the other method of getting this information.
+        -->
+        <label for="country">Which country is you favourite</label>
+        <select name="countrySelect" id="country">
+            <!--
+                optgroups let you group the options inside your select input.
+                label is required so that the optgroup displays what the category
+                is for the options inside the group.
+            -->
+            <optgroup label="North America">
+                <!-- 
+                    The option tag is the actual option a user can select.
+                    It requires the value attribute for when the selection gets
+                    sent to the server.
+                 -->
+                <option value="Canada">Canada</option>
+            </optgroup> 
+            <optgroup label="South America">
+                <option value="Brazil">Brazil</option>
+            </optgroup>
+        </select>
+        <br/>
+
+        <!--
+            This is a telephone input. type="tel", name, and id are all required.
+            minlength and maxlength can be good attributes to use for some basic error-checking.
+        -->
+        <label for="telephone">Please enter your telepone number [Example: 1-555-867-5309]:</label>
+        <input type="tel" name="userTel" id="telephone" minlength="14" maxlength="22"/>
+        <br/>
+
+        <input type="submit"/>
+        <input type="reset"/>
    </form>
 </body>
 </html>
